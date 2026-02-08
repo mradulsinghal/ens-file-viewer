@@ -1,16 +1,113 @@
-# React + Vite
+# ENS File Viewer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern **Web3 ENS explorer** that allows users to:
 
-Currently, two official plugins are available:
+* View ENS profile data from Ethereum mainnet
+* Resolve wallet addresses and ownership
+* Read social/text records linked to ENS
+* Visualize ENS relationships using an interactive social graph
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Built using **React, Ethers.js, and Alchemy RPC** with an AI-assisted development workflow.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Live Features
 
-## Expanding the ESLint configuration
+### 1. ENS Profile Viewer
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Resolve any `.eth` name
+* Fetch:
+
+  * Owner address
+  * Resolved wallet
+  * Resolver contract
+  * Social links (Twitter, GitHub, email, etc.)
+  * Expiry date
+
+All data is pulled **directly from Ethereum mainnet**.
+
+---
+
+### 2. ENS Social Graph
+
+* Visualize relationships between ENS names
+* Interactive node graph using **force-directed layout**
+* Add/remove custom connections
+* Local persistence with browser storage
+
+---
+
+## 🧱 Tech Stack
+
+* **Frontend:** React + Vite
+* **Blockchain:** Ethereum Mainnet
+* **Web3 Library:** Ethers.js
+* **RPC Provider:** Alchemy
+* **Visualization:** react-force-graph
+* **Database (optional):** Supabase
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/mradulsinghal/ens-file-viewer.git
+cd ens-file-viewer
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Add environment variables
+
+Create a `.env` file:
+
+```
+VITE_ALCHEMY_RPC_URL=your_alchemy_mainnet_rpc
+VITE_SUPABASE_URL=optional
+VITE_SUPABASE_ANON_KEY=optional
+```
+
+### 4. Run the app
+
+```bash
+npm run dev
+```
+
+---
+
+## 📚 Learning Goals
+
+This project was built to:
+
+* Understand **real on-chain ENS data fetching**
+* Practice **full-stack Web3 architecture**
+* Learn **AI-assisted rapid prototyping**
+* Ship a **production-style GitHub project**
+
+---
+
+## 🔮 Future Improvements
+
+* ENS name registration flow
+* Smart contract integration for custom ENS-like system
+* Wallet connect + transaction support
+* Mainnet deployment dashboard
+
+---
+
+## 👨‍💻 Author
+
+**Mradul Singhal**
+Aspiring **Web3 / AI Builder** focused on shipping real products using AI-accelerated development.
+
+---
+
+## 📜 License
+
+MIT License
